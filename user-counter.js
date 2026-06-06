@@ -2,26 +2,16 @@
 // Initialize Firebase with error handling
 let database;
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyD5RPNMLkFkLGYYPiCRg5Z6HPrhujmh2X0",
-  authDomain: "ai-quiz-5bfb4.firebaseapp.com",
-  projectId: "ai-quiz-5bfb4",
-  storageBucket: "ai-quiz-5bfb4.firebasestorage.app",
-  messagingSenderId: "733766959841",
-  appId: "1:733766959841:web:9016792c7bd6ed5a702da0"
+const fallbackConfig = {
+    apiKey: "AIzaSyD5RPNMLkFkLGYYPiCRg5Z6HPrhujmh2X0",
+    authDomain: "ai-quiz-5bfb4.firebaseapp.com",
+    databaseURL: "https://ai-quiz-5bfb4-default-rtdb.firebaseio.com/",
+    projectId: "ai-quiz-5bfb4",
+    storageBucket: "ai-quiz-5bfb4.firebasestorage.app",
+    messagingSenderId: "733766959841",
+    appId: "1:733766959841:web:9016792c7bd6ed5a702da0"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
 function initializeFirebaseConnection() {
     try {
         let configToUse = window.firebaseConfig || fallbackConfig;
